@@ -1,0 +1,631 @@
+import { Carousel, Card } from "../aceternity/apple-cards-carousel";
+import GradientBlinds from "../background/GradientBlinds";
+import { HeroVideoDialog } from "../components/HeroVideoDialog";
+
+// Import professional player images
+import pro1 from "../assets/proplayers/pro1.jpg";
+import pro2 from "../assets/proplayers/pro2.jpg";
+import pro3 from "../assets/proplayers/pro3.jpg";
+import pro4 from "../assets/proplayers/pro4.jpg";
+import pro5 from "../assets/proplayers/pro5.jpg";
+import pro6 from "../assets/proplayers/pro6.jpg";
+import pro7 from "../assets/proplayers/pro7.jpg";
+import pro8 from "../assets/proplayers/pro8.jpg";
+import pro9 from "../assets/proplayers/pro9.jpg";
+import pro10 from "../assets/proplayers/pro10.jpg";
+import pro11 from "../assets/proplayers/pro11.jpg";
+import pro12 from "../assets/proplayers/pro12.jpg";
+import pro13 from "../assets/proplayers/pro13.jpg";
+
+// Import team logos
+import antwerpLogo from "../assets/teams/antwerp.png";
+import betisLogo from "../assets/teams/betis.png";
+import bruggeLogo from "../assets/teams/brugge.png";
+import coloradoLogo from "../assets/teams/colorado.png";
+import columbusLogo from "../assets/teams/columbus.png";
+import cscLogo from "../assets/teams/csc.png";
+import gentLogo from "../assets/teams/gent.png";
+import kansasLogo from "../assets/teams/kansas.png";
+import kvmLogo from "../assets/teams/kvm.png";
+import ldaLogo from "../assets/teams/lda.png";
+import mityLogo from "../assets/teams/mity.png";
+import moldeLogo from "../assets/teams/molde.png";
+import nyLogo from "../assets/teams/ny.png";
+import psvLogo from "../assets/teams/psv.png";
+import redbullLogo from "../assets/teams/redbull.png";
+import ronsemborgLogo from "../assets/teams/ronsemborg.png";
+import royalLogo from "../assets/teams/royal.png";
+import sevillaLogo from "../assets/teams/sevilla.png";
+import stiftentLogo from "../assets/teams/stiftent.png";
+
+const ProPlayers = () => {
+  // Team logos data
+  const teamLogos = [
+    { src: antwerpLogo, alt: "Royal Antwerp FC" },
+    { src: betisLogo, alt: "Real Betis" },
+    { src: bruggeLogo, alt: "Club Brugge" },
+    { src: coloradoLogo, alt: "Colorado Rapids" },
+    { src: columbusLogo, alt: "Columbus Crew" },
+    { src: cscLogo, alt: "CS Cartaginés" },
+    { src: gentLogo, alt: "KAA Gent" },
+    { src: kansasLogo, alt: "Sporting Kansas City" },
+    { src: kvmLogo, alt: "KV Mechelen" },
+    { src: ldaLogo, alt: "LD Alajuelense" },
+    { src: mityLogo, alt: "FC Mity" },
+    { src: moldeLogo, alt: "Molde FK" },
+    { src: nyLogo, alt: "New York City FC" },
+    { src: psvLogo, alt: "PSV Eindhoven" },
+    { src: redbullLogo, alt: "Red Bull Salzburg" },
+    { src: ronsemborgLogo, alt: "Ronsemborg" },
+    { src: royalLogo, alt: "Royal FC" },
+    { src: sevillaLogo, alt: "Sevilla FC" },
+    { src: stiftentLogo, alt: "Stiftent Rotterdam" },
+  ];
+
+  // Professional player success stories data
+  const playerCards = [
+    {
+      src: pro1,
+      title: "Fricio Caicedo",
+      category: "Ecuador's National Team",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            From Costa Rica to La Liga's reserve team - Marco's journey through
+            Futbol Consultants opened doors to Spanish football.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">
+                Discovered at FC Academy at age 16
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span className="text-sm">
+                Developed through our professional program
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <span className="text-sm">
+                Signed with Real Sociedad B in 2024
+              </span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro2,
+      title: "Creichel Pérez",
+      category: "L.D. Alajuelense",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Carlos made the leap from Segunda División to Major League Soccer
+            through our extensive network of scouts and contacts.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">Started at FC Desamparados</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span className="text-sm">
+                Showcased in MLS talent identification programs
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+              <span className="text-sm">Currently playing in MLS</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro3,
+      title: "Marcos Brown Kymani,",
+      category: "PSV Eindhoven - Netherlands",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Diego's technical skills caught the attention of Dutch scouts,
+            leading to his development at one of Europe's top academies.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-sm">
+                Trained with our professional coaching staff
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">
+                Participated in European showcase tournaments
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+              <span className="text-sm">Signed with PSV Academy system</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro4,
+      title: "Fernán Faerrón",
+      category: "Costa Rica's National Team",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Diego's technical skills caught the attention of Dutch scouts,
+            leading to his development at one of Europe's top academies.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-sm">
+                Trained with our professional coaching staff
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">
+                Participated in European showcase tournaments
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+              <span className="text-sm">Signed with PSV Academy system</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro12,
+      title: "Andrea Pirlo",
+      category: "Fifa's World Cup Legend",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Diego's technical skills caught the attention of Dutch scouts,
+            leading to his development at one of Europe's top academies.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-sm">
+                Trained with our professional coaching staff
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">
+                Participated in European showcase tournaments
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+              <span className="text-sm">Signed with PSV Academy system</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro13,
+      title: "Jimmy Marín",
+      category: "KS Samara",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Alejandro returned to Costa Rica's top division as a proven
+            professional, bringing experience from international training.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span className="text-sm">Alumni of our Academy program</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <span className="text-sm">International experience in Spain</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">
+                First division regular in Costa Rica
+              </span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro5,
+      title: "Pablo Sanz",
+      category: "West Ham United Staff",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Javier's progression through our system led him to Belgian first
+            division football, competing in European competitions.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+              <span className="text-sm">
+                Developed technical skills at FC Academy
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-sm">
+                European placement program participant
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">First team player at KAA Gent</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro6,
+      title: "Nicolas Hagen",
+      category: "Columbus Crew",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Fernando's journey to American professional soccer showcases the
+            diverse opportunities available through our network.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span className="text-sm">
+                Futbol Consultants tryout success story
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">USL Championship regular</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+              <span className="text-sm">Pathway to MLS opportunities</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+  ];
+
+  const additionalPlayers = [
+    {
+      src: pro7,
+      title: "Ethan Barley",
+      category: "Costa Rica's National Team",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Ricardo's defensive prowess and tactical understanding opened doors
+            to Dutch professional football.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+              <span className="text-sm">Specialized defensive training</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">European tactical development</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span className="text-sm">
+                Professional contract in Netherlands
+              </span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro8,
+      title: "Randy Ramírez",
+      category: "Municipal Liberia",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Miguel's leadership qualities and midfield vision made him a key
+            player in Costa Rica's top division.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-sm">Captain at FC Desamparados</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <span className="text-sm">National team considerations</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">First division standout performer</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro9,
+      title: "Gerardo Castillo",
+      category: "A.D. San Carlos",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Andrés's attacking flair and speed caught the attention of MLS
+            scouts, earning him a development contract.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+              <span className="text-sm">
+                Futbol Consultants offensive specialist
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span className="text-sm">MLS academy graduate pathway</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-sm">Professional development league</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro10,
+      title: "Fronny Caicedo",
+      category: "Club Royal Antwerb - Belgium",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            José Pablo's versatility and professional attitude earned him a spot
+            at one of Costa Rica's most prestigious clubs.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-sm">Multi-position capability</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">CONCACAF experience</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <span className="text-sm">Championship contender</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro11,
+      title: "Alberth Elis",
+      category: "F.C. Girondins de Bordeaux",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Gabriel's goalkeeper talents and mental strength led him to American
+            professional soccer opportunities.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span className="text-sm">Specialized goalkeeper training</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+              <span className="text-sm">American professional debut</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">USL League One starter</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+  ];
+
+  // Combine all players for the carousel
+  const allPlayers = [...playerCards, ...additionalPlayers];
+
+  const cards = allPlayers.map((player, index) => (
+    <Card key={index} card={player} index={index} />
+  ));
+
+  return (
+    <div className="bg-slate-900 py-20 relative overflow-hidden min-h-screen">
+      {/* GradientBlinds Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <GradientBlinds
+          gradientColors={["#0f172a", "#1e293b", "#334155", "#475569"]}
+          angle={45}
+          noise={0.1}
+          blindCount={12}
+          blindMinWidth={80}
+          mouseDampening={0.2}
+          mirrorGradient={false}
+          spotlightRadius={0.3}
+          spotlightSoftness={2}
+          spotlightOpacity={0.4}
+          distortAmount={0.02}
+          shineDirection="right"
+          mixBlendMode="overlay"
+          className="opacity-40"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Professional Success Stories
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Discover how players who developed through Futbol Consultants have
+            achieved their dreams, signing with professional teams across
+            Europe, North America, and Central America.
+          </p>
+        </div>
+
+        {/* Teams We've Worked With - Scrolling Brands */}
+        <div className="mb-20 overflow-hidden">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Teams We've Worked With
+            </h3>
+            <p className="text-gray-400 text-lg">
+              Our players have joined professional clubs worldwide
+            </p>
+          </div>
+
+          {/* Auto-scrolling logo container */}
+          <div className="relative">
+            <div className="flex animate-scroll space-x-12 items-center">
+              {/* First set of logos */}
+              {teamLogos.map((team, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 w-40 h-24 flex items-center justify-center"
+                >
+                  <img
+                    src={team.src}
+                    alt={team.alt}
+                    className="max-h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {teamLogos.map((team, index) => (
+                <div
+                  key={`duplicate-${index}`}
+                  className="flex-shrink-0 w-40 h-24 flex items-center justify-center"
+                >
+                  <img
+                    src={team.src}
+                    alt={team.alt}
+                    className="max-h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Player Stories Videos */}
+        <div className="mb-20 max-w-6xl mx-auto">
+          <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Player Success Stories
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h4 className="text-xl font-semibold text-blue-400 text-center">
+                From Academy to Europe
+              </h4>
+              <HeroVideoDialog
+                animationStyle="from-left"
+                videoSrc="https://www.youtube.com/embed/JmvYQ7fdWzI"
+                thumbnailSrc={pro1}
+                thumbnailAlt="Player Success Story - European Journey"
+                className="rounded-2xl overflow-hidden"
+              />
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="text-xl font-semibold text-blue-400 text-center">
+                MLS Dreams Realized
+              </h4>
+              <HeroVideoDialog
+                animationStyle="from-right"
+                videoSrc="https://www.youtube.com/embed/loHp5yrFkxg"
+                thumbnailSrc={pro2}
+                thumbnailAlt="Player Success Story - MLS Journey"
+                className="rounded-2xl overflow-hidden"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Professional Players Carousel */}
+        <div className="mb-16">
+          <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Our Professional Players
+          </h3>
+          <div className="relative">
+            <Carousel items={cards} />
+          </div>
+        </div>
+
+        {/* Statistics Section */}
+        <div className="flex justify-center mb-16">
+          <div className="flex flex-wrap justify-center gap-6">
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center min-w-[140px]">
+              <div className="text-2xl font-bold text-blue-400">50+</div>
+              <div className="text-sm text-gray-300">
+                Professional Contracts
+              </div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center min-w-[140px]">
+              <div className="text-2xl font-bold text-blue-400">15</div>
+              <div className="text-sm text-gray-300">Countries Represented</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center min-w-[140px]">
+              <div className="text-2xl font-bold text-blue-400">8</div>
+              <div className="text-sm text-gray-300">MLS Players</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-center min-w-[140px]">
+              <div className="text-2xl font-bold text-blue-400">12</div>
+              <div className="text-sm text-gray-300">European Leagues</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-white/20 rounded-3xl p-12 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-6">
+              Start Your Professional Journey
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Join our proven pathway to professional soccer. Our comprehensive
+              development program, extensive scouting network, and international
+              connections create opportunities for dedicated players.
+            </p>
+            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold py-4 px-8 rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              Apply for Tryouts →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProPlayers;
