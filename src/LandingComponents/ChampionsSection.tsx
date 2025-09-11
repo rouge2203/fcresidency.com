@@ -1,11 +1,19 @@
-import besoCopaImg from "../assets/beso_copa.JPG";
-import consultantsLogo from "../assets/consultants_logo.png";
-import player1 from "../assets/player1.JPG";
-import player2 from "../assets/player2.JPG";
-import player3 from "../assets/player3.JPG";
-import player4 from "../assets/player4.JPG";
-import player5 from "../assets/player5.JPG";
-import player6 from "../assets/player6.jpg";
+const besoCopaImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/beso_copa.JPG";
+const consultantsLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/consultants_logo.png";
+const player1 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/player1.JPG";
+const player2 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/player2.JPG";
+const player3 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/player3.JPG";
+const player4 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/player4.JPG";
+const player5 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/player5.JPG";
+const player6 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/player6.jpg";
 import LightRays from "../background/LightRays";
 import Silk from "../background/Silk";
 

@@ -1,4 +1,5 @@
-import tryoutsLogo from "../assets/tryouts_logo.png";
+const tryoutsLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/tryouts_logo.png";
 
 const Navbar = () => {
   const scrollToSection = (sectionId: string) => {

@@ -1,4 +1,5 @@
-import yordin from "../assets/yordin.jpg";
+const yordin =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/yordin.jpg";
 
 const ProSoccerTryouts = () => {
   return (

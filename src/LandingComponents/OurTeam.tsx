@@ -1,5 +1,7 @@
-import monicaImg from "../assets/Monica.jpg";
-import joseImg from "../assets/jose.JPG";
+const monicaImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/Monica.jpg";
+const joseImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/jose.JPG";
 
 const OurTeam = () => {
   return (

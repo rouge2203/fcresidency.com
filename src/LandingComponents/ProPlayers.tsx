@@ -2,41 +2,73 @@ import { Carousel, Card } from "../aceternity/apple-cards-carousel";
 import GradientBlinds from "../background/GradientBlinds";
 import { HeroVideoDialog } from "../components/HeroVideoDialog";
 
-// Import professional player images
-import pro1 from "../assets/proplayers/pro1.jpg";
-import pro2 from "../assets/proplayers/pro2.jpg";
-import pro3 from "../assets/proplayers/pro3.jpg";
-import pro4 from "../assets/proplayers/pro4.jpg";
-import pro5 from "../assets/proplayers/pro5.jpg";
-import pro6 from "../assets/proplayers/pro6.jpg";
-import pro7 from "../assets/proplayers/pro7.jpg";
-import pro8 from "../assets/proplayers/pro8.jpg";
-import pro9 from "../assets/proplayers/pro9.jpg";
-import pro10 from "../assets/proplayers/pro10.jpg";
-import pro11 from "../assets/proplayers/pro11.jpg";
-import pro12 from "../assets/proplayers/pro12.jpg";
-import pro13 from "../assets/proplayers/pro13.jpg";
+// Professional player image URLs
+const pro1 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro1.jpg";
+const pro2 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro2.jpg";
+const pro3 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro3.jpg";
+const pro4 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro4.jpg";
+const pro5 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro5.jpg";
+const pro6 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro6.jpg";
+const pro7 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro7.jpg";
+const pro8 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro8.jpg";
+const pro9 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro9.jpg";
+const pro10 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro10.jpg";
+const pro11 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro11.jpg";
+const pro12 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro12.jpg";
+const pro13 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro13.jpg";
 
-// Import team logos
-import antwerpLogo from "../assets/teams/antwerp.png";
-import betisLogo from "../assets/teams/betis.png";
-import bruggeLogo from "../assets/teams/brugge.png";
-import coloradoLogo from "../assets/teams/colorado.png";
-import columbusLogo from "../assets/teams/columbus.png";
-import cscLogo from "../assets/teams/csc.png";
-import gentLogo from "../assets/teams/gent.png";
-import kansasLogo from "../assets/teams/kansas.png";
-import kvmLogo from "../assets/teams/kvm.png";
-import ldaLogo from "../assets/teams/lda.png";
-import mityLogo from "../assets/teams/mity.png";
-import moldeLogo from "../assets/teams/molde.png";
-import nyLogo from "../assets/teams/ny.png";
-import psvLogo from "../assets/teams/psv.png";
-import redbullLogo from "../assets/teams/redbull.png";
-import ronsemborgLogo from "../assets/teams/ronsemborg.png";
-import royalLogo from "../assets/teams/royal.png";
-import sevillaLogo from "../assets/teams/sevilla.png";
-import stiftentLogo from "../assets/teams/stiftent.png";
+// Team logo URLs
+const antwerpLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/antwerp.png";
+const betisLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/betis.png";
+const bruggeLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/brugge.png";
+const coloradoLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/colorado.png";
+const columbusLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/columbus.png";
+const cscLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/csc.png";
+const gentLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/gent.png";
+const kansasLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/kansas.png";
+const kvmLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/kvm.png";
+const ldaLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/lda.png";
+const mityLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/mity.png";
+const moldeLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/molde.png";
+const nyLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/ny.png";
+const psvLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/psv.png";
+const redbullLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/redbull.png";
+const ronsemborgLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/ronsemborg.png";
+const royalLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/royal.png";
+const sevillaLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/sevilla.png";
+const stiftentLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/stiftent.png";
 
 const ProPlayers = () => {
   // Team logos data

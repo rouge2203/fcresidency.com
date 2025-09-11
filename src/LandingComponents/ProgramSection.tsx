@@ -1,6 +1,9 @@
-import teamImg from "../assets/hector_epico.JPG";
-import divisionsImg from "../assets/entrenamiento_abrazo.JPG";
-import futbolConsultantsLogo from "../assets/futbol_consultants_logo.png";
+const teamImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/hector_epico.JPG";
+const divisionsImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/entrenamiento_abrazo.JPG";
+const futbolConsultantsLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/futbol_consultants_logo.png";
 import LightRays from "../background/LightRays";
 
 const ProgramSection = () => {

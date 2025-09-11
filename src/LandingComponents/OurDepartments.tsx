@@ -1,14 +1,24 @@
-import academyLogo from "../assets/fc_academy.png";
-import tryoutsLogo from "../assets/tryouts_white_logo.png";
-import collegeLogo from "../assets/fc_college.png";
-import consultantsLogo from "../assets/consultants_logo.png";
-import professionalLogo from "../assets/fc_professional_logo.png";
+const academyLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/fc_academy.png";
+const tryoutsLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/tryouts_white_logo.png";
+const collegeLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/fc_college.png";
+const consultantsLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/consultants_logo.png";
+const professionalLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/fc_professional_logo.png";
 
-import kidsImg from "../assets/kids.JPG";
-import geraImg from "../assets/gera.jpg";
-import alejandroImg from "../assets/alejandro_gutierrez.jpg";
-import alpizarImg from "../assets/alpizar.JPG";
-import jimmyImg from "../assets/jimmy_marin.jpg";
+const kidsImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/kids.JPG";
+const geraImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/gera.jpg";
+const alejandroImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/alejandro_gutierrez.jpg";
+const alpizarImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/alpizar.JPG";
+const jimmyImg =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/jimmy_marin.jpg";
 
 import GradientBlinds from "../background/GradientBlinds";
 
