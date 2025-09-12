@@ -1,5 +1,5 @@
 const landingImg =
-  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/landing-img.JPG";
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/landing-img.webp";
 import Navbar from "../LandingComponents/Navbar";
 import HeroSection from "../LandingComponents/HeroSection";
 import ProgramSection from "../LandingComponents/ProgramSection";
