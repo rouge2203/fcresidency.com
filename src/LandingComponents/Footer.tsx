@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import LobsterLogo from "../assets/lobster_logo_white.png";
 
 const Footer = () => {
