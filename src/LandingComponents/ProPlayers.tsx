@@ -492,7 +492,10 @@ const ProPlayers = () => {
   ));
 
   return (
-    <div className="bg-slate-900 py-20 relative overflow-hidden min-h-screen">
+    <div
+      className="bg-slate-900 py-20 relative overflow-hidden min-h-screen"
+      id="pro-players"
+    >
       {/* GradientBlinds Background */}
       <div className="absolute inset-0 w-full h-full">
         <GradientBlinds
@@ -579,7 +582,7 @@ const ProPlayers = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <h4 className="text-xl font-semibold text-blue-400 text-center">
-                From Academy to Europe
+                American Soccer Dreams
               </h4>
               <HeroVideoDialog
                 animationStyle="from-left"
@@ -592,7 +595,7 @@ const ProPlayers = () => {
 
             <div className="space-y-4">
               <h4 className="text-xl font-semibold text-blue-400 text-center">
-                MLS Dreams Realized
+                From Academy to Europe
               </h4>
               <HeroVideoDialog
                 animationStyle="from-right"
@@ -607,8 +610,8 @@ const ProPlayers = () => {
 
         {/* Professional Players Carousel */}
         <div className="mb-16">
-          <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Our Professional Players
+          <h3 className="text-3xl md:text-4xl font-bold text-white text-center">
+            Player we've work with
           </h3>
           <div className="relative">
             <Carousel items={cards} />
@@ -650,7 +653,15 @@ const ProPlayers = () => {
               development program, extensive scouting network, and international
               connections create opportunities for dedicated players.
             </p>
-            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold py-4 px-8 rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold py-4 px-8 rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              onClick={() => {
+                const element = document.getElementById("application-form");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
               Apply for Tryouts →
             </button>
           </div>

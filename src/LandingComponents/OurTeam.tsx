@@ -45,7 +45,7 @@ const OurTeam = () => {
                 {/* Role Badge */}
                 <div className="absolute top-6 left-6">
                   <span className="bg-slate-800 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg">
-                    CEO & Founder
+                    VP & GM
                   </span>
                 </div>
 
@@ -117,7 +117,7 @@ const OurTeam = () => {
                 {/* Role Badge */}
                 <div className="absolute top-6 left-6">
                   <span className="bg-gray-800 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg">
-                    Operations Director
+                    C.E.O.
                   </span>
                 </div>
 
@@ -136,7 +136,7 @@ const OurTeam = () => {
                     José Luis Rodriguez
                   </h3>
                   <p className="text-gray-300 font-semibold text-lg mb-4">
-                    C.E.O.
+                    CEO & Founder
                   </p>
 
                   {/* Expertise Tags */}

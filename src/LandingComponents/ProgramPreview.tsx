@@ -232,7 +232,15 @@ const ProgramPreview = () => {
                   />
                 </svg>
               </button>
-              <button className="border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 font-semibold px-10 py-5 rounded-2xl transition-all duration-300 hover:scale-105">
+              <button
+                className="border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 font-semibold px-10 py-5 rounded-2xl transition-all duration-300 hover:scale-105"
+                onClick={() => {
+                  const element = document.getElementById("pricing");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 <span className="text-lg">Compare All Programs</span>
               </button>
             </div>

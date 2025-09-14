@@ -1,58 +1,6 @@
-import { useState } from "react";
 import Beams from "../background/Beams";
 
-interface ConsultationData {
-  email: string;
-  phone: string;
-}
-
 const PricingSection = () => {
-  const [showConsultationDialog, setShowConsultationDialog] = useState(false);
-  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
-  const [consultationData, setConsultationData] = useState<ConsultationData>({
-    email: "",
-    phone: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleConsultationInputChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const { name, value } = e.target;
-    setConsultationData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleConsultationSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Console log the consultation data
-    console.log("Free Consultation Request:", consultationData);
-
-    // Simulate API call delay
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setShowConsultationDialog(false);
-      setShowSuccessDialog(true);
-      // Reset form
-      setConsultationData({
-        email: "",
-        phone: "",
-      });
-    }, 1000);
-  };
-
-  const openConsultationDialog = () => {
-    setShowConsultationDialog(true);
-  };
-
-  const closeDialogs = () => {
-    setShowConsultationDialog(false);
-    setShowSuccessDialog(false);
-  };
   return (
     <div
       id="pricing"
@@ -111,6 +59,7 @@ const PricingSection = () => {
                 <p className="text-gray-400 text-sm mb-6">
                   Intensive 10-day experience in Costa Rica
                 </p>
+                <div className="text-gray-300 text-sm">from</div>
                 <div className="text-5xl font-bold text-white mb-2">$2,500</div>
                 <div className="text-gray-300 text-sm">per participant</div>
               </div>
@@ -194,7 +143,15 @@ const PricingSection = () => {
               </div>
 
               {/* CTA Button */}
-              <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button
+                className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                onClick={() => {
+                  const element = document.getElementById("application-form");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 Apply for a Spot
               </button>
               <p className="text-center text-xs text-gray-400 mt-3">
@@ -221,7 +178,8 @@ const PricingSection = () => {
                 <p className="text-gray-400 text-sm mb-6">
                   Long-term development program in Costa Rica
                 </p>
-                <div className="text-5xl font-bold text-white mb-2">$8,500</div>
+                <div className="text-gray-300 text-sm">from</div>
+                <div className="text-5xl font-bold text-white mb-2">$4,500</div>
                 <div className="text-gray-300 text-sm">per month</div>
               </div>
 
@@ -308,7 +266,15 @@ const PricingSection = () => {
               </div>
 
               {/* CTA Button */}
-              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-4 px-6 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-4 px-6 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                onClick={() => {
+                  const element = document.getElementById("application-form");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 Apply for a Spot
               </button>
               <p className="text-center text-xs text-gray-400 mt-3">
@@ -329,158 +295,22 @@ const PricingSection = () => {
               and find the perfect path to professional soccer.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={openConsultationDialog}
-                className="bg-white/10 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition duration-300"
+              <a
+                href="mailto:info@fcprossocertryouts.com?subject=Free Consultation Request&body=Hi, I would like to schedule a free consultation to discuss my soccer goals and find the right program for me."
+                className="bg-white/10 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition duration-300 text-center"
               >
-                Schedule Free Consultation
-              </button>
-              {/* <button className="border border-gray-400 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition duration-300">
-                Download Program Guide
-              </button> */}
+                📧 Email Us for Consultation
+              </a>
+              <a
+                href="tel:+50687050594"
+                className="bg-green-500/20 border border-green-500/30 text-white font-semibold px-8 py-4 rounded-xl hover:bg-green-500/30 transition duration-300 text-center"
+              >
+                📞 Call Us: +506 87050594
+              </a>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Consultation Dialog */}
-      {showConsultationDialog && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 max-w-md mx-4 w-full">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-white mb-2">
-                Free Consultation
-              </h3>
-              <p className="text-gray-300">
-                Provide your contact information and we'll reach out to discuss
-                your soccer goals.
-              </p>
-            </div>
-
-            <form onSubmit={handleConsultationSubmit} className="space-y-4">
-              <div>
-                <label
-                  htmlFor="consultation-email"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="consultation-email"
-                  name="email"
-                  value={consultationData.email}
-                  onChange={handleConsultationInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="consultation-phone"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  id="consultation-phone"
-                  name="phone"
-                  value={consultationData.phone}
-                  onChange={handleConsultationInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="+1 (555) 123-4567"
-                />
-              </div>
-
-              <div className="flex gap-3 pt-4">
-                <button
-                  type="button"
-                  onClick={closeDialogs}
-                  className="flex-1 bg-white/10 border border-white/20 text-white font-semibold py-3 px-4 rounded-xl hover:bg-white/20 transition duration-300"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold py-3 px-4 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <span className="flex items-center justify-center">
-                      <svg
-                        className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        ></circle>
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        ></path>
-                      </svg>
-                      Submitting...
-                    </span>
-                  ) : (
-                    "Request Consultation"
-                  )}
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
-
-      {/* Success Dialog */}
-      {showSuccessDialog && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 max-w-md mx-4">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8 text-green-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Request Submitted!
-              </h3>
-              <p className="text-gray-300 mb-6">
-                Thank you for your consultation request. We will be
-                communicating with you within the next 24-48 hours to schedule
-                your free consultation.
-              </p>
-              <button
-                onClick={closeDialogs}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

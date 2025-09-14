@@ -1,5 +1,6 @@
 const tryoutsLogo =
-  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/tryouts_logo.png";
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/fcpro_logo.webp";
+import GradientBlinds from "../background/GradientBlinds";
 
 const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
@@ -10,17 +11,44 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 px-6 py-4 bg-white/10 backdrop-blur-md border-b border-white/20">
+    <nav className="absolute top-0 left-0 right-0 z-50 px-6 py-4 bg-white/25 backdrop-blur-md border-b border-white/20">
+      {/* GradientBlinds Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900 to-transparent opacity-40"></div>
+        <GradientBlinds
+          gradientColors={[
+            "#1e293b",
+            "#334155",
+            "#475569",
+            "#60a5fa",
+            "#3b82f6",
+          ]}
+          angle={60}
+          noise={0.08}
+          blindCount={14}
+          blindMinWidth={90}
+          mouseDampening={0.25}
+          mirrorGradient={false}
+          spotlightRadius={0.4}
+          spotlightSoftness={1.8}
+          spotlightOpacity={0.3}
+          distortAmount={0.03}
+          shineDirection="right"
+          mixBlendMode="overlay"
+          className="opacity-50"
+        />
+      </div>
+
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <div className="flex items-center space-x-2">
           <img
             src={tryoutsLogo}
             alt="Pro Soccer Tryouts"
-            className="h-10 w-auto filter drop-shadow-lg"
+            className="sm:h-10 h-8 w-auto filter drop-shadow-lg"
           />
         </div>
 
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 z-10">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="text-gray-300 hover:text-white transition"
@@ -53,7 +81,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 z-10">
           <button
             onClick={() => scrollToSection("application-form")}
             className="text-gray-300 hover:text-white transition"

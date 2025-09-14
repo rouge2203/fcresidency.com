@@ -250,7 +250,7 @@ const ProgramDetails = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="relative z-10 py-20">
+      <div className="relative z-10 py-20" id="program-details">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="mb-6">
@@ -295,7 +295,7 @@ const ProgramDetails = () => {
 
       {/* Program Overview Tab */}
       {activeTab === "overview" && (
-        <div className="relative z-10 py-16">
+        <div className="relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
               <div>
@@ -401,7 +401,7 @@ const ProgramDetails = () => {
 
       {/* Daily Schedule Tab */}
       {activeTab === "schedule" && (
-        <div className="relative z-10 py-16">
+        <div className="relative z-10 ">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
               <h3 className="text-4xl font-bold text-white mb-4">
@@ -484,7 +484,7 @@ const ProgramDetails = () => {
 
       {/* Facilities Tab */}
       {activeTab === "facilities" && (
-        <div className="relative z-10 py-16">
+        <div className="relative z-10 ">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
               <h3 className="text-4xl font-bold text-white mb-4">
@@ -544,7 +544,7 @@ const ProgramDetails = () => {
 
       {/* Success Stories Tab */}
       {activeTab === "success" && (
-        <div className="relative z-10 py-16">
+        <div className="relative z-10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
               <h3 className="text-4xl font-bold text-white mb-4">
@@ -656,17 +656,33 @@ const ProgramDetails = () => {
               Costa Rica.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold px-8 py-4 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold px-8 py-4 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                onClick={() => {
+                  const element = document.getElementById("application-form");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 Start Your Journey Today
               </button>
-              <button className="border border-gray-400 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition duration-300">
-                View Program Calendar
+              <button
+                className="border border-gray-400 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition duration-300"
+                onClick={() => {
+                  const element = document.getElementById("pricing");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                View Pricing
               </button>
             </div>
             <div className="mt-8 flex justify-center items-center space-x-8 text-sm text-gray-400">
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                Next Program: December 2024
+                Next Program: All year round
               </div>
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>

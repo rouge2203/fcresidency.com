@@ -3,6 +3,7 @@ import Silk from "../background/Silk";
 import LightRays from "../background/LightRays";
 
 interface FormData {
+  name: string;
   country: string;
   email: string;
   phone: string;
@@ -14,6 +15,7 @@ interface FormData {
 
 const ApplicationForm = () => {
   const [formData, setFormData] = useState<FormData>({
+    name: "",
     country: "",
     email: "",
     phone: "",
@@ -40,24 +42,61 @@ const ApplicationForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Console log the form data
-    console.log("Application Form Data:", formData);
+    try {
+      // Prepare data for API according to expected format
+      const apiData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        country: formData.country,
+        age: formData.age,
+        team: formData.currentTeam,
+        highlighta: formData.youtubeLink || "", // Optional field
+        program: formData.program,
+      };
 
-    // Simulate API call delay
-    setTimeout(() => {
+      console.log("Submitting application:", apiData);
+
+      const response = await fetch(
+        "https://api.lobsterlabs.net/api/fcprosoccertryouts/submit-application",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(apiData),
+        }
+      );
+
+      const result = await response.json();
+
+      if (result.success) {
+        setShowSuccessDialog(true);
+        // Reset form on success
+        setFormData({
+          name: "",
+          country: "",
+          email: "",
+          phone: "",
+          age: "",
+          currentTeam: "",
+          youtubeLink: "",
+          program: "",
+        });
+      } else {
+        // Handle API error
+        alert(
+          "There was an error submitting your application. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Error submitting application:", error);
+      alert(
+        "There was an error submitting your application. Please check your connection and try again."
+      );
+    } finally {
       setIsSubmitting(false);
-      setShowSuccessDialog(true);
-      // Reset form
-      setFormData({
-        country: "",
-        email: "",
-        phone: "",
-        age: "",
-        currentTeam: "",
-        youtubeLink: "",
-        program: "",
-      });
-    }, 1000);
+    }
   };
 
   const closeDialog = () => {
@@ -226,6 +265,26 @@ const ApplicationForm = () => {
                   onSubmit={handleSubmit}
                   className="space-y-4 relative z-10"
                 >
+                  {/* Name */}
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-3 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+
                   {/* Country */}
                   <div>
                     <label
@@ -241,7 +300,7 @@ const ApplicationForm = () => {
                       value={formData.country}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
+                      className="w-full px-3 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
                       placeholder="Enter your country"
                     />
                   </div>
@@ -261,7 +320,7 @@ const ApplicationForm = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
+                      className="w-full px-3 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -281,7 +340,7 @@ const ApplicationForm = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
+                      className="w-full px-3 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -303,7 +362,7 @@ const ApplicationForm = () => {
                       required
                       min="16"
                       max="30"
-                      className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
+                      className="w-full px-3 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
                       placeholder="Your age"
                     />
                   </div>
@@ -323,7 +382,7 @@ const ApplicationForm = () => {
                       value={formData.currentTeam}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
+                      className="w-full px-3 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
                       placeholder="Enter your current team, school, or college"
                     />
                   </div>
@@ -342,12 +401,12 @@ const ApplicationForm = () => {
                       name="youtubeLink"
                       value={formData.youtubeLink}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
-                      placeholder="https://youtube.com/watch?v=..."
+                      className="w-full px-3 py-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
+                      placeholder="https://youtube.com/watch?v=... (optional)"
                     />
                     <p className="text-gray-500 text-xs mt-1">
                       Share a video showcasing your soccer skills (highly
-                      recommended)
+                      recommended but optional)
                     </p>
                   </div>
 
@@ -365,15 +424,13 @@ const ApplicationForm = () => {
                       value={formData.program}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
+                      className="w-full text-black px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-300 hover:border-blue-400"
                     >
                       <option value="">Select a program</option>
                       <option value="pro-soccer-tryouts">
-                        Pro Soccer Tryouts (10 days - $2,500)
+                        Pro Soccer Tryouts
                       </option>
-                      <option value="fc-residency">
-                        FC Residency (3-12 months - $8,500/month)
-                      </option>
+                      <option value="fc-residency">FC Residency</option>
                       <option value="consultation">
                         Need consultation to decide
                       </option>
@@ -408,7 +465,7 @@ const ApplicationForm = () => {
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                           ></path>
                         </svg>
-                        Creating account...
+                        Submitting application...
                       </span>
                     ) : (
                       <span className="relative z-10">Submit Application</span>
@@ -460,9 +517,8 @@ const ApplicationForm = () => {
                   </span>
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  Thank you for your application. Our evaluation team will
-                  review your information and contact you if you meet our
-                  selection criteria.
+                  Thank you for your application. We will check your application
+                  and contact you as soon as possible.
                 </p>
                 <button
                   onClick={closeDialog}

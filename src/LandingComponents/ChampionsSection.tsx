@@ -19,7 +19,10 @@ import Silk from "../background/Silk";
 
 const ChampionsSection = () => {
   return (
-    <div className="bg-slate-900 py-20 relative overflow-hidden">
+    <div
+      className="bg-slate-900 py-20 relative overflow-hidden"
+      id="championship"
+    >
       {/* Silk Background */}
       <div className="absolute inset-0 w-full h-full opacity-30">
         <Silk
@@ -89,7 +92,15 @@ const ChampionsSection = () => {
             </p>
 
             <div className="flex space-x-4">
-              <button className="relative overflow-hidden bg-gradient-to-r from-yellow-500/80 via-yellow-400/90 to-yellow-500/80 backdrop-blur-xl border border-yellow-400/30 text-black font-semibold px-8 py-4 rounded-xl transition-all duration-300 flex items-center group hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/25">
+              <button
+                className="relative overflow-hidden bg-gradient-to-r from-yellow-500/80 via-yellow-400/90 to-yellow-500/80 backdrop-blur-xl border border-yellow-400/30 text-black font-semibold px-8 py-4 rounded-xl transition-all duration-300 flex items-center group hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/25"
+                onClick={() => {
+                  window.open(
+                    "https://www.instagram.com/p/DJzx4ucyhZt/?img_index=1",
+                    "_blank"
+                  );
+                }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
                 <span className="relative z-10">Championship Story</span>
                 <svg
@@ -106,9 +117,17 @@ const ChampionsSection = () => {
                   />
                 </svg>
               </button>
-              <button className="relative overflow-hidden bg-white/5 backdrop-blur-xl border border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-white/10">
+              <button
+                className="relative overflow-hidden bg-white/5 backdrop-blur-xl border border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-white/10"
+                onClick={() => {
+                  window.open(
+                    "https://www.transfermarkt.es/futbol-consultants-desamparados/startseite/verein/60858/saison_id/2025",
+                    "_blank"
+                  );
+                }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
-                <span className="relative z-10">Watch Highlights</span>
+                <span className="relative z-10">Explore Team</span>
               </button>
             </div>
           </div>

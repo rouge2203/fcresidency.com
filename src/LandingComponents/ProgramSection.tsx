@@ -56,21 +56,6 @@ const ProgramSection = () => {
           </p>
         </div>
 
-        {/* Navigation Tabs */}
-        {/* <div className="flex justify-center mb-12">
-          <div className="flex bg-slate-800 rounded-xl p-2">
-            <button className="px-6 py-3 text-white bg-orange-500 rounded-lg font-medium transition">
-              Our Professional Team
-            </button>
-            <button className="px-6 py-3 text-gray-400 hover:text-white transition">
-              Our Divisions
-            </button>
-            <button className="px-6 py-3 text-gray-400 hover:text-white transition">
-              FC Residency
-            </button>
-          </div>
-        </div> */}
-
         {/* Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
           {/* Large Professional Team Card */}
@@ -122,7 +107,15 @@ const ProgramSection = () => {
                     personalized guidance and mentorship throughout your
                     journey.
                   </p>
-                  <button className="bg-white/90 backdrop-blur-xl text-gray-900 font-bold py-3 px-6 rounded-xl hover:bg-white transition-all duration-300 text-sm group-hover:scale-105 shadow-lg">
+                  <button
+                    className="bg-white/90 backdrop-blur-xl text-gray-900 font-bold py-3 px-6 rounded-xl hover:bg-white transition-all duration-300 text-sm group-hover:scale-105 shadow-lg"
+                    onClick={() => {
+                      const element = document.getElementById("championship");
+                      if (element) {
+                        element.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                  >
                     Learn More →
                   </button>
                 </div>
@@ -187,7 +180,16 @@ const ProgramSection = () => {
                       Comprehensive pathways for every level of player
                       development.
                     </p>
-                    <button className="bg-white/90 backdrop-blur-xl text-gray-900 font-semibold py-2 px-4 rounded-lg hover:bg-white transition-all duration-300 text-xs group-hover:scale-105 shadow-lg">
+                    <button
+                      className="bg-white/90 backdrop-blur-xl text-gray-900 font-semibold py-2 px-4 rounded-lg hover:bg-white transition-all duration-300 text-xs group-hover:scale-105 shadow-lg"
+                      onClick={() => {
+                        const element =
+                          document.getElementById("pro-soccer-tryouts");
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                    >
                       Explore Paths →
                     </button>
                   </div>

@@ -20,14 +20,18 @@ const HeroSection = ({ backgroundImage }: HeroSectionProps) => {
         <div className="max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
             <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">
+              <span className=" px-3 py-1 hidden sm:inline-block bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">
                 ELITE SOCCER DEVELOPMENT
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-6">
-              <span className="block">BECOME A PRO</span>
-              <span className="block text-blue-400">PLAYER</span>
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+              <span className="block">
+                BECOME A <span className="sm:inline-block hidden">PRO</span>
+              </span>
+              <span className="block text-blue-400">
+                <span className="sm:hidden inline-block">PRO</span> PLAYER
+              </span>
             </h1>
 
             <p className="text-xl text-gray-300 mb-8 max-w-lg leading-relaxed">
@@ -37,7 +41,15 @@ const HeroSection = ({ backgroundImage }: HeroSectionProps) => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition duration-200 flex items-center justify-center">
+              <button
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition duration-200 flex items-center justify-center"
+                onClick={() => {
+                  const element = document.getElementById("application-form");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 <span>Apply for Tryouts</span>
                 <svg
                   className="w-5 h-5 ml-2"
@@ -53,7 +65,15 @@ const HeroSection = ({ backgroundImage }: HeroSectionProps) => {
                   />
                 </svg>
               </button>
-              <button className="border border-gray-600 text-white hover:bg-gray-800 font-semibold px-8 py-4 rounded-lg transition duration-200">
+              <button
+                className="border border-gray-600 text-white hover:bg-gray-800 font-semibold px-8 py-4 rounded-lg transition duration-200"
+                onClick={() => {
+                  const element = document.getElementById("pro-players");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 Meet Our Players
               </button>
             </div>
