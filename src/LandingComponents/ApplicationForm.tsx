@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Silk from "../background/Silk";
-import LightRays from "../background/LightRays";
 
 interface FormData {
   name: string;
@@ -109,7 +107,7 @@ const ApplicationForm = () => {
       className="bg-slate-900 py-20 relative overflow-hidden min-h-screen"
     >
       {/* Silk Background */}
-      <div className="absolute inset-0 w-full h-full opacity-30">
+      {/* <div className="absolute inset-0 w-full h-full opacity-30">
         <Silk
           speed={3}
           scale={1.2}
@@ -117,10 +115,10 @@ const ApplicationForm = () => {
           noiseIntensity={0.8}
           rotation={0.2}
         />
-      </div>
+      </div> */}
 
       {/* Light Rays Background */}
-      <div className="absolute inset-0 w-full h-full">
+      {/* <div className="absolute inset-0 w-full h-full">
         <LightRays
           raysOrigin="left"
           raysColor="#3b82f6"
@@ -135,7 +133,7 @@ const ApplicationForm = () => {
           saturation={0.8}
           className="opacity-40"
         />
-      </div>
+      </div> */}
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Header Section */}

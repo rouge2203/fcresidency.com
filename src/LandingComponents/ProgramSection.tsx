@@ -4,30 +4,10 @@ const divisionsImg =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/entrenamiento_abrazo.JPG";
 const futbolConsultantsLogo =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/futbol_consultants_logo.png";
-import LightRays from "../background/LightRays";
 
 const ProgramSection = () => {
   return (
-    <div className="bg-gray-900 py-20 relative overflow-hidden">
-      {/* Light Rays Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/20 to-transparent opacity-30"></div>
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#64748b"
-          raysSpeed={1.5}
-          lightSpread={0.8}
-          rayLength={2.0}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          fadeDistance={1.0}
-          saturation={1.0}
-          className="opacity-30"
-        />
-      </div>
-
+    <div className="bg-gradient-to-r from-slate-800 via-slate-900 to-black py-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Logo Section */}
         <div className="text-center mb-12">
