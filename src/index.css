@@ -48,9 +48,47 @@ body {
 }
 
 .animate-scroll {
-  animation: scroll 40s linear infinite;
+  animation: scroll 32s linear infinite;
 }
 
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+/* Horizontal scrolling styles */
+.logo-marquee-container {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.5) transparent;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.logo-marquee-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.logo-marquee-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.logo-marquee-container::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.6);
+  border-radius: 3px;
+}
+
+.logo-marquee-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+/* On mobile, make scrolling easier */
+@media (max-width: 768px) {
+  .logo-marquee-container {
+    scrollbar-width: none;
+  }
+
+  .logo-marquee-container::-webkit-scrollbar {
+    display: none;
+  }
 }

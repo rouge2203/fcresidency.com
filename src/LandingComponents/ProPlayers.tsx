@@ -1,6 +1,7 @@
 import { Carousel, Card } from "../aceternity/apple-cards-carousel";
 // import GradientBlinds from "../background/GradientBlinds";
 import { HeroVideoDialog } from "../components/HeroVideoDialog";
+import { useRef, useEffect, useState } from "react";
 
 // Professional player image URLs
 const pro1 =
@@ -71,6 +72,39 @@ const stiftentLogo =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/teams/stiftent.png";
 
 const ProPlayers = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isUserScrolling, setIsUserScrolling] = useState(false);
+  const [scrollTimeout, setScrollTimeout] = useState<number | null>(null);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      setIsUserScrolling(true);
+
+      // Clear existing timeout
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+
+      // Resume auto-scroll after user stops scrolling for 3 seconds
+      const timeout = setTimeout(() => {
+        setIsUserScrolling(false);
+      }, 3000);
+
+      setScrollTimeout(timeout);
+    };
+
+    container.addEventListener("scroll", handleScroll);
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+    };
+  }, [scrollTimeout]);
   // Team logos data
   const teamLogos = [
     { src: antwerpLogo, alt: "Royal Antwerp FC" },
@@ -531,29 +565,53 @@ const ProPlayers = () => {
         </div>
 
         {/* Teams We've Worked With - Scrolling Brands */}
-        <div className="mb-20 overflow-hidden">
+        <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Teams We've Worked With
             </h3>
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-400 text-lg mb-4">
               Our players have joined professional clubs worldwide
             </p>
+            <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <span className="hidden sm:inline">←</span>
+              <span>Scroll horizontally or hover to pause auto-scroll</span>
+              <span className="hidden sm:inline">→</span>
+            </div>
           </div>
 
-          {/* Auto-scrolling logo container */}
-          <div className="relative">
-            <div className="flex animate-scroll space-x-12 items-center">
+          {/* Horizontally scrollable logo container */}
+          <div
+            ref={scrollContainerRef}
+            className="logo-marquee-container relative overflow-x-auto pb-4 group"
+          >
+            {/* Scroll indicators */}
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+              <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-white text-xs">←</span>
+              </div>
+            </div>
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 pointer-events-none">
+              <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-white text-xs">→</span>
+              </div>
+            </div>
+
+            <div
+              className={`flex space-x-12 items-center min-w-max px-6 transition-all duration-300 ${
+                isUserScrolling ? "" : "animate-scroll"
+              }`}
+            >
               {/* First set of logos */}
               {teamLogos.map((team, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-40 h-24 flex items-center justify-center"
+                  className="flex-shrink-0 w-40 h-24 flex items-center justify-center group cursor-pointer"
                 >
                   <img
                     src={team.src}
                     alt={team.alt}
-                    className="max-h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                    className="max-h-20 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                   />
                 </div>
               ))}
@@ -561,12 +619,25 @@ const ProPlayers = () => {
               {teamLogos.map((team, index) => (
                 <div
                   key={`duplicate-${index}`}
-                  className="flex-shrink-0 w-40 h-24 flex items-center justify-center"
+                  className="flex-shrink-0 w-40 h-24 flex items-center justify-center group cursor-pointer"
                 >
                   <img
                     src={team.src}
                     alt={team.alt}
-                    className="max-h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                    className="max-h-20 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                  />
+                </div>
+              ))}
+              {/* Third set for extra smooth scrolling */}
+              {teamLogos.map((team, index) => (
+                <div
+                  key={`triple-${index}`}
+                  className="flex-shrink-0 w-40 h-24 flex items-center justify-center group cursor-pointer"
+                >
+                  <img
+                    src={team.src}
+                    alt={team.alt}
+                    className="max-h-20 w-auto object-contain opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
                   />
                 </div>
               ))}
