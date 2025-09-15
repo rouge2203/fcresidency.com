@@ -1,4 +1,4 @@
-import Beams from "../background/Beams";
+// import Beams from "../background/Beams";
 
 const PricingSection = () => {
   return (
@@ -7,7 +7,7 @@ const PricingSection = () => {
       className="bg-black py-20 relative overflow-hidden min-h-screen flex items-center"
     >
       {/* Beams Background */}
-      <div className="absolute inset-0 w-full h-full">
+      {/* <div className="absolute inset-0 w-full h-full">
         <Beams
           beamWidth={3}
           beamHeight={20}
@@ -18,7 +18,7 @@ const PricingSection = () => {
           scale={0.15}
           rotation={15}
         />
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         {/* Header Section */}

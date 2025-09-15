@@ -1,5 +1,5 @@
 import { Carousel, Card } from "../aceternity/apple-cards-carousel";
-import GradientBlinds from "../background/GradientBlinds";
+// import GradientBlinds from "../background/GradientBlinds";
 import { HeroVideoDialog } from "../components/HeroVideoDialog";
 
 // Professional player image URLs
@@ -497,7 +497,7 @@ const ProPlayers = () => {
       id="pro-players"
     >
       {/* GradientBlinds Background */}
-      <div className="absolute inset-0 w-full h-full">
+      {/* <div className="absolute inset-0 w-full h-full">
         <GradientBlinds
           gradientColors={["#0f172a", "#1e293b", "#334155", "#475569"]}
           angle={45}
@@ -514,7 +514,7 @@ const ProPlayers = () => {
           mixBlendMode="overlay"
           className="opacity-40"
         />
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}

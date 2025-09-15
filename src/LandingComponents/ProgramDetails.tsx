@@ -15,7 +15,7 @@ const pro1 =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro1.jpg";
 const pro2 =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro2.jpg";
-import Beams from "../background/Beams";
+// import Beams from "../background/Beams";
 
 const ProgramDetails = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -236,7 +236,7 @@ const ProgramDetails = () => {
   return (
     <div className="bg-black relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 w-full h-full">
+      {/* <div className="absolute inset-0 w-full h-full">
         <Beams
           beamWidth={2}
           beamHeight={15}
@@ -247,7 +247,7 @@ const ProgramDetails = () => {
           scale={0.12}
           rotation={25}
         />
-      </div>
+      </div> */}
 
       {/* Hero Section */}
       <div className="relative z-10 py-20" id="program-details">
