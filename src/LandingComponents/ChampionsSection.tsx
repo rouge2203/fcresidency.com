@@ -14,7 +14,7 @@ const player5 =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/player5.JPG";
 const player6 =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/player6.jpg";
-import LightRays from "../background/LightRays";
+// import LightRays from "../background/LightRays";
 import Silk from "../background/Silk";
 
 const ChampionsSection = () => {
@@ -35,7 +35,7 @@ const ChampionsSection = () => {
       </div>
 
       {/* Light Rays Background */}
-      <div className="absolute inset-0 w-full h-full">
+      {/* <div className="absolute inset-0 w-full h-full">
         <LightRays
           raysOrigin="right"
           raysColor="#fbbf24"
@@ -50,7 +50,7 @@ const ChampionsSection = () => {
           saturation={0.8}
           className="opacity-40"
         />
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

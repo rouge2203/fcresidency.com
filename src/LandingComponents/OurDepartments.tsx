@@ -20,16 +20,14 @@ const alpizarImg =
 const jimmyImg =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/jimmy_marin.jpg";
 
-import GradientBlinds from "../background/GradientBlinds";
-
 const OurDepartments = () => {
   return (
     <div
       id="our-departments"
-      className="bg-slate-800 py-20 relative overflow-hidden min-h-screen flex items-center"
+      className="bg-gradient-to-r from-blue-900 via-slate-900 to-black py-20 relative overflow-hidden min-h-screen flex items-center"
     >
       {/* GradientBlinds Background */}
-      <div className="absolute inset-0 w-full h-full">
+      {/* <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/15 to-transparent opacity-40"></div>
         <GradientBlinds
           gradientColors={[
@@ -53,7 +51,7 @@ const OurDepartments = () => {
           mixBlendMode="overlay"
           className="opacity-50"
         />
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         {/* Header */}
