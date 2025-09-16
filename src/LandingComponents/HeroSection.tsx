@@ -6,11 +6,19 @@ const HeroSection = ({ backgroundImage }: HeroSectionProps) => {
   return (
     <>
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-slate-800">
         <img
           src={backgroundImage}
           alt="Pro Soccer Tryouts"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          onLoad={(e) => {
+            const img = e.target as HTMLImageElement;
+            img.style.opacity = "1";
+          }}
+          style={{ opacity: 0, transition: "opacity 0.3s ease-in-out" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/50 to-transparent"></div>
       </div>
@@ -29,7 +37,7 @@ const HeroSection = ({ backgroundImage }: HeroSectionProps) => {
               <span className="block">
                 BECOME A <span className="sm:inline-block hidden">PRO</span>
               </span>
-              <span className="block text-blue-400">
+              <span className="block text-blue-600">
                 <span className="sm:hidden inline-block">PRO</span> PLAYER
               </span>
             </h1>

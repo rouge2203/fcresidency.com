@@ -1,8 +1,9 @@
 import { useState } from "react";
+import Silk from "../background/Silk";
 const landingImg =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/landing-img.JPG";
 const yordin =
-  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/yordin.jpg";
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/yordin.webp";
 const yordin_trofeo =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/yordin_trofeo.JPG";
 const entrenamientoAbrazo =
@@ -236,18 +237,15 @@ const ProgramDetails = () => {
   return (
     <div className="bg-black relative overflow-hidden">
       {/* Background Effects */}
-      {/* <div className="absolute inset-0 w-full h-full">
-        <Beams
-          beamWidth={2}
-          beamHeight={15}
-          beamNumber={6}
-          lightColor="#3b82f6"
-          speed={0.8}
-          noiseIntensity={0.8}
-          scale={0.12}
-          rotation={25}
+      <div className="absolute inset-0 w-full h-full opacity-65">
+        <Silk
+          speed={4}
+          scale={0.9}
+          noiseIntensity={1.6}
+          rotation={1.69}
+          color="#005BB6"
         />
-      </div> */}
+      </div>
 
       {/* Hero Section */}
       <div className="relative z-10 py-20" id="program-details">
@@ -269,7 +267,7 @@ const ProgramDetails = () => {
           </div>
 
           {/* Navigation Tabs */}
-          <div className="flex flex-wrap justify-center mb-12 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-2 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center sm:mb-0 -mb-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-2 max-w-4xl mx-auto">
             {[
               { id: "overview", label: "Program Overview", icon: "🎯" },
               { id: "schedule", label: "Daily Schedule", icon: "⏰" },
@@ -295,7 +293,7 @@ const ProgramDetails = () => {
 
       {/* Program Overview Tab */}
       {activeTab === "overview" && (
-        <div className="relative z-10">
+        <div className="relative z-10 ">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
               <div>

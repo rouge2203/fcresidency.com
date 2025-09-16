@@ -7,11 +7,16 @@
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
+  /* Prevent white background flashing */
+  overflow-x: hidden;
 }
 
 #root {
   min-height: 100vh;
   width: 100%;
+  /* Ensure immediate rendering */
+  position: relative;
 }
 
 :root {
@@ -32,9 +37,12 @@ html {
 body {
   margin: 0;
   padding: 0;
+  padding-top: 84px; /* Space for fixed navbar */
   min-width: 320px;
   min-height: 100vh;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Performance optimizations */
+  overflow-x: hidden;
 }
 
 /* Auto-scrolling animation for team logos */
@@ -91,4 +99,61 @@ body {
   .logo-marquee-container::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* Performance optimizations for smooth content loading */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent any CSS resets from affecting navbar */
+#main-navbar {
+  display: block !important;
+}
+
+/* Prevent layout shifts during scroll (disabled to avoid fixed issues) */
+/* .bg-slate-900,
+.bg-black {
+  will-change: transform;
+  backface-visibility: hidden;
+} */
+
+/* React-scroll optimizations */
+.element {
+  position: relative;
+  z-index: auto;
+}
+
+/* Navbar fixed positioning - simplified and targeted */
+#main-navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 10000 !important;
+  width: 100% !important;
+}
+
+/* Image loading optimizations */
+img {
+  image-rendering: optimizeQuality;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+}
+
+/* Critical background images optimization */
+img[src*="landing-img"],
+img[src*="yordin"] {
+  content-visibility: auto;
+  contain: layout style paint;
+}
+
+/* Prevent white background flashing during react-scroll transitions */
+div[id*="pricing"],
+div[id*="pro-soccer-tryouts"],
+div[id*="our-departments"],
+div[id*="our-team"],
+div[id*="application-form"] {
+  background-color: #0f172a !important;
+  min-height: 100vh;
 }

@@ -5,6 +5,9 @@ const divisionsImg =
 const futbolConsultantsLogo =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/futbol_consultants_logo.png";
 
+const fcproLogo =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/fcpro_dark.webp";
+
 const ProgramSection = () => {
   return (
     <div className="bg-gradient-to-r from-slate-800 via-slate-900 to-black py-20 relative overflow-hidden">
@@ -15,7 +18,7 @@ const ProgramSection = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/20 to-white/10 rounded-2xl blur-xl"></div>
             <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
               <img
-                src={futbolConsultantsLogo}
+                src={fcproLogo}
                 alt="FC Professional"
                 className="h-20 mx-auto filter drop-shadow-lg"
               />

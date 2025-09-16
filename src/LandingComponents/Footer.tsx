@@ -2,7 +2,7 @@ import LobsterLogo from "../assets/lobster_logo_white.png";
 
 const Footer = () => {
   return (
-    <div className="bg-slate-900 py-6 border-t border-slate-700">
+    <div className="bg-slate-900 py-6 border-t sm:border-none   border-slate-700">
       <div className="max-w-7xl mx-auto px-6">
         {/* Main Footer Content */}
         <div className="flex flex-col items-center space-y-4">
@@ -20,7 +20,7 @@ const Footer = () => {
               <img
                 src={LobsterLogo}
                 alt="Lobster Labs"
-                className="h-6 w-auto filter brightness-90 hover:brightness-100 transition-all duration-200"
+                className="sm:h-6 h-4.5 w-auto filter brightness-90 hover:brightness-100 transition-all duration-200"
               />
             </a>
           </div>

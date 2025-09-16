@@ -1,7 +1,15 @@
 import AppRouter from "./Router";
+import Navbar from "./LandingComponents/Navbar";
 
 function App() {
-  return <AppRouter />;
+  return (
+    <>
+      {/* Global fixed navbar */}
+      <Navbar />
+      {/* Routed pages below */}
+      <AppRouter />
+    </>
+  );
 }
 
 export default App;
