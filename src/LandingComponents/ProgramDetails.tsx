@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Silk from "../background/Silk";
+// import Silk from "../background/Silk";
 const landingImg =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/landing-img.JPG";
 const yordin =
@@ -237,7 +237,7 @@ const ProgramDetails = () => {
   return (
     <div className="bg-black relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 w-full h-full opacity-65">
+      {/* <div className="absolute hidden xl:block inset-0 w-full h-full opacity-65">
         <Silk
           speed={4}
           scale={0.9}
@@ -245,7 +245,7 @@ const ProgramDetails = () => {
           rotation={1.69}
           color="#005BB6"
         />
-      </div>
+      </div> */}
 
       {/* Hero Section */}
       <div className="relative z-10 py-20" id="program-details">
@@ -351,7 +351,7 @@ const ProgramDetails = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 relative overflow-hidden">
+                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 relative overflow-hidden shadow-2xl shadow-blue-900/40">
                   <img
                     src={yordin}
                     alt="Professional Training"
@@ -370,7 +370,7 @@ const ProgramDetails = () => {
               {programHighlights.map((highlight, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <div className="text-4xl mb-4">{highlight.icon}</div>
                   <h4 className="text-xl font-bold text-white mb-3">
@@ -416,7 +416,7 @@ const ProgramDetails = () => {
               {dailySchedule.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mr-4">
@@ -439,7 +439,7 @@ const ProgramDetails = () => {
             </div>
 
             {/* Schedule Summary */}
-            <div className="mt-16 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+            <div className="mt-16 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl shadow-black/30">
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
                   <div className="text-4xl font-bold text-blue-400 mb-2">

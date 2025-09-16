@@ -1,5 +1,5 @@
 // import Beams from "../background/Beams";
-import Silk from "../background/Silk";
+// import Silk from "../background/Silk";
 import { Element } from "react-scroll";
 
 const PricingSection = () => {
@@ -10,7 +10,7 @@ const PricingSection = () => {
         className="bg-black py-20 relative overflow-hidden min-h-screen flex items-center"
       >
         {/* Silk Background */}
-        <div className="absolute inset-0 w-full h-full opacity-25">
+        {/* <div className="absolute hidden xl:block inset-0 w-full h-full opacity-25">
           <Silk
             speed={4}
             scale={0.9}
@@ -18,7 +18,7 @@ const PricingSection = () => {
             rotation={1.69}
             color="#005BB6"
           />
-        </div>
+        </div> */}
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           {/* Header Section */}
@@ -43,7 +43,7 @@ const PricingSection = () => {
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Pro Soccer Tryouts */}
             <div className="relative">
-              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 h-full">
+              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 h-full shadow-xl shadow-blue-900/30 hover:shadow-2xl">
                 {/* Popular Badge */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">
@@ -166,7 +166,7 @@ const PricingSection = () => {
 
             {/* FC Residency */}
             <div className="relative">
-              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 h-full">
+              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 h-full shadow-xl shadow-purple-900/30 hover:shadow-2xl">
                 {/* Premium Badge */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">
