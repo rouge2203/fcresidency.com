@@ -3,7 +3,7 @@ import { Element } from "react-scroll";
 const andreyImg =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/andrey_img.webp";
 const joseImg =
-  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/jose.JPG";
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/joseluis2.webp";
 
 const OurTeam = () => {
   return (
@@ -116,7 +116,7 @@ const OurTeam = () => {
                   <img
                     src={joseImg}
                     alt="José Luis Rodriguez"
-                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
                   />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
