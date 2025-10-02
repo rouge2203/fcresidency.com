@@ -97,7 +97,7 @@ const OurTeam = () => {
                   </div>
 
                   <a
-                    href="https://www.instagram.com/monimalavassi/"
+                    href="https://www.instagram.com/andreyrosalesb/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white text-slate-900 font-bold py-3 px-6 rounded-xl hover:bg-gray-50 transition-all duration-300 text-sm w-full group-hover:scale-105 shadow-lg text-center block"
