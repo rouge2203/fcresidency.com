@@ -44,6 +44,22 @@
 
       gtag("config", "AW-17615638948");
     </script>
+
+    <!-- Event snippet for Apply now form conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-17615638948/bPjACNOlx6UbEKSj5c9B",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

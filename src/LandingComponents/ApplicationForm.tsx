@@ -70,6 +70,14 @@ const ApplicationForm = () => {
       const result = await response.json();
 
       if (result.success) {
+        // Track successful form submission for Google Ads
+        if (
+          typeof window !== "undefined" &&
+          (window as any).gtag_report_conversion
+        ) {
+          (window as any).gtag_report_conversion();
+        }
+
         setShowSuccessDialog(true);
         // Reset form on success
         setFormData({
