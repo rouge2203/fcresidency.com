@@ -1,7 +1,7 @@
 const besoCopaImg =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/beso_copa.JPG";
 const consultantsLogo =
-  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/consultants_logo.png";
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/futbol-consultants-moravia-logo.webp";
 const player1 =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/player1.JPG";
 const player2 =
@@ -67,16 +67,11 @@ const ChampionsSection = () => {
             <div className="flex items-center space-x-4 mb-6">
               <img
                 src={consultantsLogo}
-                alt="Futbol Consultants Desamparados"
+                alt="FC Moravia "
                 className="w-20 h-20 object-contain"
               />
-              <div>
-                <h3 className="text-2xl font-bold text-white">
-                  Futbol Consultants
-                </h3>
-                <h4 className="text-xl font-semibold text-blue-400">
-                  Desamparados
-                </h4>
+              <div className="flex ">
+                <h3 className="text-5xl font-bold text-white">FC Moravia</h3>
               </div>
             </div>
 

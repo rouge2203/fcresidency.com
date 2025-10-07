@@ -30,6 +30,10 @@ const pro12 =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro12.jpg";
 const pro13 =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro13.jpg";
+const pro14 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/joseluis2.webp";
+const pro15 =
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/proplayers/pro15.webp";
 
 // Team logo URLs
 const antwerpLogo =
@@ -176,7 +180,7 @@ const ProPlayers = () => {
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-              <span className="text-sm">Started at FC Desamparados</span>
+              <span className="text-sm">Started at FC Moravia</span>
             </div>
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -194,7 +198,7 @@ const ProPlayers = () => {
     },
     {
       src: pro3,
-      title: "Marcos Brown Kymani,",
+      title: "Marcos Brown Kymani",
       category: "PSV Eindhoven - Netherlands",
       content: (
         <div className="bg-white p-8 text-gray-800 rounded-2xl">
@@ -280,6 +284,38 @@ const ProPlayers = () => {
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
               <span className="text-sm">Signed with PSV Academy system</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      src: pro15,
+      title: "Yurdi Hodelín, Elvis Casanova",
+      category: "Cuban U20 National Team",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Yurdi and Elvis were discovered in Cuba through our network of
+            scouts and contacts and developed through our professional program.
+            They are now playing in the Cuban U20 National Team.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-sm">Discovered in Cuba</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">
+                Developed through our professional program
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <span className="text-sm">
+                Playing in the Cuban U20 National Team
+              </span>
             </div>
           </div>
         </div>
@@ -374,6 +410,41 @@ const ProPlayers = () => {
         </div>
       ),
     },
+    {
+      src: pro14,
+      title: "José Luis Rodriguez",
+      category: "Professional Soccer Agent",
+      content: (
+        <div className="bg-white p-8 text-gray-800 rounded-2xl">
+          <p className="text-lg font-medium mb-4">
+            Jose Luis Rodriguez is a professional soccer agent with over 20
+            years of experience in the industry. He has represented multiple
+            international players and has worked with over 50 clubs around the
+            world.
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <span className="text-sm">
+                Over 20 years of experience in the industry
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <span className="text-sm">
+                Represented multiple international players
+              </span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+              <span className="text-sm">
+                Worked with over 50 clubs around the world
+              </span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
   ];
 
   const additionalPlayers = [
@@ -419,7 +490,7 @@ const ProPlayers = () => {
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              <span className="text-sm">Captain at FC Desamparados</span>
+              <span className="text-sm">Captain at FC Moravia</span>
             </div>
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>

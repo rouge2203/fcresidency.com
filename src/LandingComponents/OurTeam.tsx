@@ -2,8 +2,10 @@ import { Element } from "react-scroll";
 
 const andreyImg =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/andrey_img.webp";
+// const joseImg =
+//   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/joseluis2.webp";
 const joseImg =
-  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/joseluis2.webp";
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/joseluis3.webp";
 
 const OurTeam = () => {
   return (

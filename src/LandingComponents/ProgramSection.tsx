@@ -3,7 +3,7 @@ const teamImg =
 const divisionsImg =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/entrenamiento_abrazo.JPG";
 const futbolConsultantsLogo =
-  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/futbol_consultants_logo.png";
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/futbol-consultants-moravia-logo.webp";
 
 const fcproLogo =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/fcpro_dark.webp";

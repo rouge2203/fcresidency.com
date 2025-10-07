@@ -7,7 +7,7 @@ const tryoutsLogo =
 const collegeLogo =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/fc_college.png";
 const consultantsLogo =
-  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/consultants_logo.png";
+  "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/futbol-consultants-moravia-logo.webp";
 const professionalLogo =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/fc_professional_logo.png";
 
@@ -313,13 +313,13 @@ const OurDepartments = () => {
                 </div>
               </div>
 
-              {/* FC Desamparados Card */}
+              {/* FC Moravia Card */}
               <div className="lg:col-span-3 relative group">
                 <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-700">
                   {/* Full Background Image */}
                   <img
                     src={alpizarImg}
-                    alt="FC Desamparados"
+                    alt="FC Moravia"
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
 
@@ -336,7 +336,7 @@ const OurDepartments = () => {
                           <div className="relative rounded-xl p-1 hover:bg-white/40 transition-all duration-300">
                             <img
                               src={consultantsLogo}
-                              alt="FC Desamparados"
+                              alt="FC Moravia"
                               className="h-20 w-auto mx-auto filter drop-shadow-lg"
                             />
                           </div>
@@ -344,7 +344,7 @@ const OurDepartments = () => {
                       </div>
 
                       <h3 className="text-lg font-bold text-white mb-2 drop-shadow-lg">
-                        FC Desamparados
+                        FC Moravia
                       </h3>
                       <p className="text-white/90 text-xs leading-relaxed mb-3 drop-shadow">
                         Second Division team - our base professional club where
