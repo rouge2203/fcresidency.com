@@ -61,7 +61,7 @@ const PricingSection = () => {
                   </p>
                   <div className="text-gray-300 text-sm">from</div>
                   <div className="text-5xl font-bold text-white mb-2">
-                    $2,500
+                    $1,750
                   </div>
                   <div className="text-gray-300 text-sm">per participant</div>
                 </div>
@@ -184,7 +184,7 @@ const PricingSection = () => {
                   </p>
                   <div className="text-gray-300 text-sm">from</div>
                   <div className="text-5xl font-bold text-white mb-2">
-                    $4,500
+                    $3,500
                   </div>
                   <div className="text-gray-300 text-sm">per month</div>
                 </div>
