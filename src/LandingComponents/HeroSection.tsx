@@ -1,8 +1,12 @@
+import { VideoIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 interface HeroSectionProps {
   backgroundImage: string;
 }
 
 const HeroSection = ({ backgroundImage }: HeroSectionProps) => {
+  const navigate = useNavigate();
   return (
     <>
       {/* Background Image */}
@@ -74,15 +78,12 @@ const HeroSection = ({ backgroundImage }: HeroSectionProps) => {
                 </svg>
               </button>
               <button
-                className="border border-gray-600 text-white hover:bg-gray-800 font-semibold px-8 py-4 rounded-lg transition duration-200"
+                className="border flex items-center justify-center border-gray-600 text-white hover:bg-gray-800 font-semibold px-8 py-4 rounded-lg transition duration-200"
                 onClick={() => {
-                  const element = document.getElementById("pro-players");
-                  if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
-                  }
+                  navigate("/video-gallery");
                 }}
               >
-                Meet Our Players
+                <VideoIcon className="w-5 h-5 mr-2" /> Watch Q&A Session
               </button>
             </div>
           </div>
