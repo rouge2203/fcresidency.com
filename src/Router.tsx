@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import VideoGallery from "./pages/VideoGallery";
 
 // Create the router configuration using createBrowserRouter for better performance
 const router = createBrowserRouter([
@@ -8,6 +9,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Index />,
     errorElement: <NotFound />,
+  },
+  {
+    path: "/video-gallery",
+    element: <VideoGallery />,
   },
   {
     path: "*",

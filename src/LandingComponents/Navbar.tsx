@@ -1,11 +1,22 @@
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
 const tryoutsLogo =
   "https://mafisa-group-assets.nyc3.cdn.digitaloceanspaces.com/prosoccertryouts/fcpro_light.webp";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleQAClick = () => {
+    navigate("/video-gallery");
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
   };
 
   return (
@@ -67,6 +78,12 @@ const Navbar = () => {
           >
             Pricing
           </Link>
+          <button
+            onClick={handleQAClick}
+            className="text-gray-200 hover:text-white hover:cursor-pointer transition"
+          >
+            Q&A
+          </button>
         </div>
 
         <div className="flex items-center space-x-4 z-10">

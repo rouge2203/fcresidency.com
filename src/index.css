@@ -37,7 +37,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  padding-top: 84px; /* Space for fixed navbar */
+  /* padding-top: 84px; Space for fixed navbar */
   min-width: 320px;
   min-height: 100vh;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -97,6 +97,43 @@ body {
   }
 
   .logo-marquee-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Video carousel scrollbar styles */
+.video-carousel-container {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.5) transparent;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.video-carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.video-carousel-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.video-carousel-container::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.6);
+  border-radius: 4px;
+}
+
+.video-carousel-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+@media (max-width: 768px) {
+  .video-carousel-container {
+    scrollbar-width: none;
+  }
+
+  .video-carousel-container::-webkit-scrollbar {
     display: none;
   }
 }
